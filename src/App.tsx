@@ -24,10 +24,10 @@ export default function App() {
           </div>
           <div className="exercise-style">
             {selectedView == "info" ? <p>All exercises for React day-1</p> : null}
-            {selectedView == "props1" ? <PropsDemo title = "Props Demo"/> : null}
-            {selectedView == "list1" ? <ListDemo title = "List Demo"/> : null}
-            {selectedView == "event1" ? <EventDemo1 title = "Event Demo"/> : null}
-            {selectedView == "form1" ? <FormUncontrolled title = "Form Uncontrolled"/> : null}
+            {selectedView == "props1" ? <PropsDemo title="Props Demo" /> : null}
+            {selectedView == "list1" ? <ListDemo title="List Demo" /> : null}
+            {selectedView == "event1" ? <EventDemo1 title="Event Demo" /> : null}
+            {selectedView == "form1" ? <FormUncontrolled title="Form Uncontrolled" /> : null}
             {/**Add the exercise components you create for each exercise using the key you used for the matching button  */}
           </div>
         </div>
@@ -39,7 +39,7 @@ type ButtonProps = {
   onSelected: (selected: string) => void;
 };
 const Buttons = (props: ButtonProps) => {
-  const { onSelected: handleSelected, btnStyle: btnStyle } = props;
+  const { onSelected: handleSelected } = props;
   return (
     <>
       <button className="btn-w100" onClick={() => handleSelected("info")}>
